@@ -100,17 +100,22 @@ namespace Escape_House_Game
                         thereis = true;
                 }
             }
+
             if (thereis == true)
             {
                 Store store = (Store)_object;
-                Key key = (Key)store.ObjectInside;
-                store.ObjectInside = null;
-                _object = store;
+                if (store.ObjectInside != null)
+                {
+                    Key key = (Key)store.ObjectInside;
+                    store.ObjectInside = null;
+                    _object = store;
 
-                objectList.Add(key);
-                UpdateObjectId();
+                    objectList.Add(key);
+                    UpdateObjectId();
+                }
             }
         }
+
         public void OpenObject(Coffer _coffer)
         {
             if (_coffer.ObjectInside != null)

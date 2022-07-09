@@ -44,6 +44,10 @@ namespace Escape_House_Game
             {
                 player.Move(house.LivingRoom);
             }
+            else if (player.ActualPosition == house.Outside)
+            {
+                player.Move(house.Corridor);
+            }
             Console.WriteLine(player.PositionUpdate());
             player.ActualPosition.ShowObjects();
         }
@@ -53,7 +57,11 @@ namespace Escape_House_Game
             {
                 if (player.Move(house.Outside))
                     if (player.HaveWon == false)
+                    {
                         Console.WriteLine("\n\tCongratulations!!!! You have won.\n");
+                        player.HaveWon = true;
+                    }
+                       
 
             }
             else if (player.ActualPosition == house.LivingRoom)
