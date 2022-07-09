@@ -43,8 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coffer.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameMenu.cs" />
+    <Compile Include="House.cs" />
+    <Compile Include="IGameState.cs" />
+    <Compile Include="InGame.cs" />
+    <Compile Include="Items.cs" />
+    <Compile Include="Key.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="Object.cs" />
+    <Compile Include="ObjectManagement.cs" />
+    <Compile Include="Option.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="Store.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
